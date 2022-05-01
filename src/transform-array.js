@@ -42,15 +42,13 @@ function transform(arr) {
       arr2.splice(i - 1, 2);
     }
     if (arr2[i] == '--double-next') {
-      let a = arr2[i + 1];
-      arr2.splice(i, 1, a);
+      arr2.splice(i, 1, arr2[i + 1]);
     }
     if (arr2[i] == '--double-prev') {
-      let b = arr2[i - 1];
-      arr2.splice(i, 1, b);
+      arr2.splice(i, 1, arr2[i - 1]);
     }
   }
-  
+
   return arr2;
 }
 
